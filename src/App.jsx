@@ -35,7 +35,7 @@ import Differentiation from "./pages/Differentiation";
 
 function App() {
   return (
-    <BrowserRouter basename="/Numerical-web">
+    <BrowserRouter basename="/NumerOop">
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Root of Equation */}
