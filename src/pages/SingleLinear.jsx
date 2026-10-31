@@ -212,7 +212,7 @@ export default function SingleLinear() {
 
         {/* ===== Output Section ===== */}
         <div className="bg-slate-800 rounded-lg p-4 shadow fade-in-delay2">
-          <h3 className="text-gray-300 mb-2">กราฟ Single Linear Regression</h3>
+          <h3 className="text-black mb-2">กราฟ Single Linear Regression</h3>
           <div className="w-full h-72 rounded overflow-hidden">
             <GraphSimpleRegression
               xs={points.map((p) => p.x)}
@@ -243,9 +243,7 @@ export default function SingleLinear() {
       {/* ===== Table Section ===== */}
       {/* Regression table removed per configuration (graph only) */}
 
-      <div className="text-sm text-gray-400 mt-6 fade-in-delay3">
-        © By KaiMaiRuh
-      </div>
+
     </div>
   );
 }

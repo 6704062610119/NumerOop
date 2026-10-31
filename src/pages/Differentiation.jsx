@@ -214,7 +214,6 @@ export default function Differentiation() {
         )}
       </div>
 
-      <div className="text-sm text-gray-400 mt-6">© By KaiMaiRuh</div>
     </div>
   );
 }

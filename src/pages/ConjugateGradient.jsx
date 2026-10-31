@@ -251,7 +251,6 @@ export default function ConjugateGradient() {
       {/* ===== Results Table ===== */}
       {/* table moved inside the main panel; no duplicate here */}
 
-      <div className="text-sm text-gray-400 mt-6 fade-in-delay3">© By KaiMaiRuh</div>
     </div>
   );
 }

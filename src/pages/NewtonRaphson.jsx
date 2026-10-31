@@ -193,7 +193,7 @@ export default function NewtonRaphson() {
         <TableRoot iterations={(iterations || []).map((it) => ({ ...it, x1: undefined }))} />
       </div>
 
-      <div className="text-sm text-gray-400 mt-6 fade-in-delay3">© By KaiMaiRuh</div>
+
     </div>
   );
 }

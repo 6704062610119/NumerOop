@@ -175,7 +175,6 @@ export default function CompositeTrapezoidal() {
         {/* Results table removed per configuration */}
       </div>
 
-      <div className="text-sm text-gray-400 mt-6 fade-in-delay3">© By KaiMaiRuh</div>
     </div>
   );
 }

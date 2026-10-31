@@ -10,8 +10,8 @@ export default function GraphSimpleRegression({
   b = null,
   fitFunc = null,
   className = "",
-  pointColor = "#38bdf8",
-  lineColor = "#f59e0b",
+  pointColor = "#108ab1",
+  lineColor = "#f78c6a",
   series = null,
   showLegend = true,
 }) {
@@ -148,10 +148,10 @@ export default function GraphSimpleRegression({
         style={{ cursor: draggingRef.current ? "grabbing" : "default" }}
       >
         {/* background */}
-        <rect x="0" y="0" width={viewW} height={viewH} fill="#0f172a" />
+        <rect x="0" y="0" width={viewW} height={viewH} fill="#ffffff" />
 
         {/* Plot area border */}
-        <rect x={margins.left} y={margins.top} width={innerW} height={innerH} fill="none" stroke="#334155" strokeWidth="1" />
+        <rect x={margins.left} y={margins.top} width={innerW} height={innerH} fill="none" stroke="#9bcac3" strokeWidth="1" />
 
         {/* Clip path for plot area */}
         <defs>
@@ -173,10 +173,10 @@ export default function GraphSimpleRegression({
           for (let xv = xStart; xv <= vp.xMax + 1e-9; xv = +(xv + xStep).toFixed(12)) {
             const px = scaleX(xv);
             elements.push(
-              <line key={`vg-${xv}`} x1={px} y1={margins.top} x2={px} y2={viewH - margins.bottom} stroke="rgba(148,163,184,0.08)" strokeWidth="1" />
+              <line key={`vg-${xv}`} x1={px} y1={margins.top} x2={px} y2={viewH - margins.bottom} stroke="rgba(7,58,75,0.12)" strokeWidth="1" />
             );
             elements.push(
-              <text key={`xl-${xv}`} x={px} y={viewH - margins.bottom + 6} textAnchor="middle" alignmentBaseline="hanging" fill="#cbd5e1" fontSize="12">
+              <text key={`xl-${xv}`} x={px} y={viewH - margins.bottom + 6} textAnchor="middle" alignmentBaseline="hanging" fill="#55727a" fontSize="12">
                 {Math.round(xv)}
               </text>
             );
@@ -187,10 +187,10 @@ export default function GraphSimpleRegression({
           for (let yv = yStart; yv <= vp.yMax + 1e-9; yv = +(yv + yStep).toFixed(12)) {
             const py = scaleY(yv);
             elements.push(
-              <line key={`hg-${yv}`} x1={margins.left} y1={py} x2={viewW - margins.right} y2={py} stroke="rgba(148,163,184,0.08)" strokeWidth="1" />
+              <line key={`hg-${yv}`} x1={margins.left} y1={py} x2={viewW - margins.right} y2={py} stroke="rgba(7,58,75,0.12)" strokeWidth="1" />
             );
             elements.push(
-              <text key={`yl-${yv}`} x={margins.left - 8} y={py} textAnchor="end" alignmentBaseline="middle" fill="#cbd5e1" fontSize="12">
+              <text key={`yl-${yv}`} x={margins.left - 8} y={py} textAnchor="end" alignmentBaseline="middle" fill="#55727a" fontSize="12">
                 {Math.round(yv)}
               </text>
             );
@@ -200,13 +200,13 @@ export default function GraphSimpleRegression({
           if (vp.yMin <= 0 && vp.yMax >= 0) {
             const py0 = scaleY(0);
             elements.push(
-              <line key="x-axis" x1={margins.left} y1={py0} x2={viewW - margins.right} y2={py0} stroke="#475569" strokeWidth="1.5" />
+              <line key="x-axis" x1={margins.left} y1={py0} x2={viewW - margins.right} y2={py0} stroke="#108ab1" strokeWidth="1.5" />
             );
           }
           if (vp.xMin <= 0 && vp.xMax >= 0) {
             const px0 = scaleX(0);
             elements.push(
-              <line key="y-axis" x1={px0} y1={margins.top} x2={px0} y2={viewH - margins.bottom} stroke="#475569" strokeWidth="1.5" />
+              <line key="y-axis" x1={px0} y1={margins.top} x2={px0} y2={viewH - margins.bottom} stroke="#108ab1" strokeWidth="1.5" />
             );
           }
           return <g>{elements}</g>;
@@ -240,7 +240,7 @@ export default function GraphSimpleRegression({
             {normalizedSeries.map((s, i) => (
               <g key={`leg-${i}`} transform={`translate(${margins.left}, ${margins.top - 6 - i * 16})`}>
                 <rect x={0} y={0} width={12} height={12} fill={s.pointColor || pointColor} stroke={s.lineColor || lineColor} strokeWidth={2} />
-                <text x={16} y={10} fill="#cbd5e1" fontSize="12">{s.label || `series ${i + 1}`}</text>
+                <text x={16} y={10} fill="#315963" fontSize="12">{s.label || `series ${i + 1}`}</text>
               </g>
             ))}
           </g>

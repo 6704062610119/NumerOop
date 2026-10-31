@@ -271,7 +271,7 @@ export default function MultipleLinear() {
 
         {/* Right: Results */}
         <div className="bg-slate-800 rounded-lg p-4 shadow fade-in-delay2">
-          <h3 className="text-gray-300 mb-2">กราฟและผลลัพธ์</h3>
+          <h3 className="text-black mb-2">กราฟและผลลัพธ์</h3>
           {/* Single combined graph with multiple series (one per feature) */}
           <div className="w-full h-72 rounded overflow-hidden bg-slate-900 mb-3">
             <GraphSimpleRegression
@@ -289,7 +289,7 @@ export default function MultipleLinear() {
             />
           </div>
 
-          <h4 className="text-gray-300 mb-2">คำอธิบายผลลัพธ์</h4>
+          <h4 className="text-black mb-2">คำอธิบายผลลัพธ์</h4>
           {model?.coef ? (
             <div className="text-sm text-gray-300 space-y-1">
               <div>
@@ -314,7 +314,6 @@ export default function MultipleLinear() {
         </div>
       </div>
 
-      <div className="text-sm text-gray-400 mt-6 fade-in-delay3">© By KaiMaiRuh</div>
     </div>
   );
 }

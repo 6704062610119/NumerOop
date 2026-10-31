@@ -94,9 +94,9 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
 
     function draw() {
   const vp = viewportRef.current;
-      // background (dark theme)
+      // Plot background and grid use the shared palette.
       ctx.clearRect(0, 0, cssWidth, cssHeight);
-      ctx.fillStyle = "#0f172a"; // slate-900
+      ctx.fillStyle = "#ffffff";
       ctx.fillRect(0, 0, cssWidth, cssHeight);
 
       // Grid and tick labels
@@ -110,18 +110,18 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
       ctx.font = "12px system-ui, Arial";
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillStyle = "#94a3b8"; // slate-400
+      ctx.fillStyle = "#55727a";
 
       const xStart = Math.ceil(vp.xmin / xStep) * xStep;
       for (let x = xStart; x <= vp.xmax; x = +(x + xStep).toFixed(12)) {
         const [px] = worldToPixel([x, vp.ymin], vp, cssWidth, cssHeight);
         ctx.beginPath();
-        ctx.strokeStyle = "rgba(148,163,184,0.08)"; // light grid
+        ctx.strokeStyle = "rgba(7,58,75,0.12)";
         ctx.moveTo(px, 0);
         // draw grid only inside plot area
         ctx.lineTo(px, cssHeight - margins.bottom);
         ctx.stroke();
-  ctx.fillStyle = "#cbd5e1"; // slate-300
+      ctx.fillStyle = "#55727a";
         // show integer-like ticks (round to integer)
         ctx.fillText(Math.round(x).toString(), px, cssHeight - (margins.bottom / 2));
       }
@@ -132,18 +132,18 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
       for (let y = yStart; y <= vp.ymax; y = +(y + yStep).toFixed(12)) {
         const [, py] = worldToPixel([vp.xmin, y], vp, cssWidth, cssHeight);
         ctx.beginPath();
-        ctx.strokeStyle = "rgba(148,163,184,0.08)";
+        ctx.strokeStyle = "rgba(7,58,75,0.12)";
         // draw grid only inside plot area
         ctx.moveTo(margins.left, py);
         ctx.lineTo(cssWidth - margins.right, py);
         ctx.stroke();
-        ctx.fillStyle = "#cbd5e1";
+        ctx.fillStyle = "#55727a";
         ctx.fillText(Math.round(y).toString(), margins.left - 8, py);
       }
 
       // Axes at 0
       ctx.lineWidth = 1.5;
-      ctx.strokeStyle = "#475569"; // slate-600
+      ctx.strokeStyle = "#108ab1";
       if (vp.ymin <= 0 && vp.ymax >= 0) {
         const [, py] = worldToPixel([vp.xmin, 0], vp, cssWidth, cssHeight);
         ctx.beginPath();
@@ -163,7 +163,7 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
       if (points.length >= 2) {
         if (staircase) {
           // Draw red staircase: vertical first, then horizontal
-          ctx.strokeStyle = "#ef4444"; // red-500
+          ctx.strokeStyle = "#f04770";
           ctx.lineWidth = 1.6;
           for (let i = 1; i < points.length; i++) {
             const [x0, y0] = points[i - 1];
@@ -184,7 +184,7 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
           }
         } else {
           // Default: green straight connectors
-          ctx.strokeStyle = "#22c55e"; // green-500
+          ctx.strokeStyle = "#06d7a0";
           ctx.lineWidth = 1.6;
           for (let i = 1; i < points.length; i++) {
             const [x0, y0] = points[i - 1];
@@ -200,7 +200,7 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
       }
 
       // Red points at (xm, f(xm))
-      ctx.fillStyle = "#ef4444"; // red-500
+      ctx.fillStyle = "#f04770";
       points.forEach(([x, y], i) => {
         const [px, py] = worldToPixel([x, y], viewportRef.current, cssWidth, cssHeight);
         ctx.beginPath();
@@ -295,7 +295,7 @@ export default function GraphRoot({ func, iterations = [], xl, xr, width = 800, 
   return (
     <div>
       <canvas ref={canvasRef} width={width} height={height} className={className}></canvas>
-      <div style={{ color: "#94a3b8", fontSize: 13, marginTop: 8 }}>{caption ?? defaultCaption}</div>
+      <div style={{ color: "#55727a", fontSize: 13, marginTop: 8 }}>{caption ?? defaultCaption}</div>
     </div>
   );
 }

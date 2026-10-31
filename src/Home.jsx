@@ -63,9 +63,9 @@ export default function Home() {
 
   // ส่วนแสดงผลหน้า Home
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center p-6 bg-slate-900">
+    <div className="home-page min-h-screen w-full flex flex-col justify-center items-center p-6 bg-transparent">
       {/* หัวข้อหลัก */}
-      <h1 className="text-3xl font-bold text-cyan-400 mb-8 text-center fade-in">
+      <h1 className="text-3xl font-bold text-[#108ab1] mb-8 text-center fade-in">
         Numerical Methods
       </h1>
 
@@ -76,12 +76,12 @@ export default function Home() {
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-slate-800 rounded-xl p-5 shadow-lg border border-cyan-700 w-72
+              className="bg-slate-800 rounded-xl p-5 shadow-lg border border-[#06d7a0] w-72
                          transform transition-all duration-300 fade-in-delay1
                          hover:scale-105 hover:shadow-2xl glow-btn"
             >
               {/* ชื่อหมวดหมู่ */}
-              <h2 className="text-lg font-semibold text-cyan-300 mb-3 text-center">
+              <h2 className="text-lg font-semibold text-[#073a4b] mb-3 text-center">
                 {cat.title}
               </h2>
               <ul className="space-y-2">
