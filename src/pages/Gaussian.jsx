@@ -87,7 +87,6 @@ export default function Gaussian() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Gaussian Elimination"
-        subtitle="การกำจัดแบบเกาส์ (Forward Elimination + Back Substitution)"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

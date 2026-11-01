@@ -63,44 +63,37 @@ export default function Home() {
 
   // ส่วนแสดงผลหน้า Home
   return (
-    <div className="home-page min-h-screen w-full flex flex-col justify-center items-center p-6 bg-transparent">
+    <main className="home-page">
       {/* หัวข้อหลัก */}
-      <h1 className="text-3xl font-bold text-[#108ab1] mb-8 text-center fade-in">
+      <h1 className="home-title text-3xl font-bold text-[#108ab1] fade-in">
         Numerical Methods
       </h1>
 
-      {/* flex wrapper ให้ grid อยู่กลางจอ */}
-      <div className="flex justify-center items-center w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto">
-          {/* วนลูปสร้างกล่องแต่ละหมวดหมู่ */}
-          {categories.map((cat) => (
-            <div
-              key={cat.title}
-              className="bg-slate-800 rounded-xl p-5 shadow-lg border border-[#06d7a0] w-72
-                         transform transition-all duration-300 fade-in-delay1
-                         hover:scale-105 hover:shadow-2xl glow-btn"
-            >
-              {/* ชื่อหมวดหมู่ */}
-              <h2 className="text-lg font-semibold text-[#073a4b] mb-3 text-center">
-                {cat.title}
-              </h2>
-              <ul className="space-y-2">
-                {/* วนลูปสร้างลิงก์แต่ละหัวข้อ */}
-                {cat.topics.map((t) => (
-                  <li
-                    key={t.id}
-                    className="bg-slate-700 p-2 rounded-md hover:bg-slate-600 transition-colors"
-                  >
-                    <Link to={t.path} className="block text-center">
-                      {t.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      <div className="home-grid">
+        {categories.map((cat) => (
+          <section
+            key={cat.title}
+            className="home-category bg-slate-800 rounded-xl shadow-lg fade-in-delay1"
+          >
+            <h2 className="home-category-title text-lg font-semibold">
+              {cat.title}
+            </h2>
+            <ul className="home-topic-list">
+              {cat.topics.map((t) => (
+                <li
+                  key={t.id}
+                  className="home-topic bg-slate-700 rounded-md hover:bg-slate-600 transition-colors"
+                >
+                  <Link to={t.path} className="home-topic-link">
+                    <span>{t.name}</span>
+                    <span className="home-topic-arrow" aria-hidden="true">›</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
-    </div>
+    </main>
   );
 }

@@ -82,7 +82,7 @@ export default function Cramer() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <PageHeader title="Cramer's Rule" subtitle="หาคำตอบของระบบสมการเชิงเส้นโดยใช้ Determinant" />
+      <PageHeader title="Cramer's Rule" />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">
         <label className="block text-sm text-gray-400 mb-1">ขนาดเมทริกซ์ (n × n)</label>

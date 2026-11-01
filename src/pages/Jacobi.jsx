@@ -100,7 +100,6 @@ export default function Jacobi() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Jacobi Iteration Method"
-        subtitle="วิธีการหาคำตอบของระบบสมการเชิงเส้นแบบทำซ้ำ (Iterative Method)"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

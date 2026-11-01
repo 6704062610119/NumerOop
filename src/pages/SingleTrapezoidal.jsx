@@ -77,7 +77,6 @@ export default function SingleTrapezoidal() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Single Trapezoidal Rule"
-        subtitle="การอินทิเกรตเชิงตัวเลขแบบ Trapezoidal (ช่วงเดียว)"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

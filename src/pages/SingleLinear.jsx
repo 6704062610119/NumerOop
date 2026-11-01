@@ -110,7 +110,6 @@ export default function SingleLinear() {
     <div className="max-w-6xl mx-auto p-6">
       <PageHeader
         title="Single Linear Regression"
-        subtitle="การหาสมการเส้นตรงที่เหมาะสมกับข้อมูล (y = a + bx)"
       />
 
       <div className="grid md:grid-cols-2 gap-6">

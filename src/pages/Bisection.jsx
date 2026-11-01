@@ -132,7 +132,7 @@ export default function Bisection() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <PageHeader title="Bisection Method" subtitle="ตาราง + กราฟ แสดงการทำงาน (เวอร์ชันใหม่)" />
+      <PageHeader title="Bisection Method" />
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* ===== Input Panel ===== */}

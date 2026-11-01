@@ -145,7 +145,6 @@ export default function MultipleLinear() {
     <div className="max-w-6xl mx-auto p-6">
       <PageHeader
         title="Multiple Linear Regression"
-        subtitle="การถดถอยเชิงเส้นพหุคูณ: y = a + b₁x₁ + ... + b_m x_m"
       />
 
       <div className="grid md:grid-cols-2 gap-6">

@@ -80,7 +80,6 @@ export default function SimpsonsRule() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Simpson’s Rule (1/3)"
-        subtitle="การอินทิเกรตเชิงตัวเลขด้วย Simpson’s Composite Rule"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

@@ -102,7 +102,6 @@ export default function ConjugateGradient() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Conjugate Gradient Method"
-        subtitle="การหาคำตอบของระบบสมการเชิงเส้น (เฉพาะเมทริกซ์สมมาตรบวกกำหนดแน่นอน SPD)"
       />
       <div className="bg-slate-800 rounded-lg p-4 shadow">
         {/* ===== Input Section (combined single column like Jacobi) ===== */}

@@ -84,7 +84,6 @@ export default function CompositeSimpson() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Composite Simpson’s Rule (1/3)"
-        subtitle="การอินทิเกรตเชิงตัวเลขแบบหลายช่วงด้วย Simpson’s Rule"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

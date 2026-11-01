@@ -96,7 +96,6 @@ export default function LinearSpline() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Linear Spline Interpolation"
-        subtitle="การประมาณค่า f(x) ด้วยเส้นตรงระหว่างจุดข้อมูลที่ต่อเนื่องกัน"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

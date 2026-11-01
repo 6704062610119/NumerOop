@@ -105,7 +105,7 @@ export default function Secant() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <PageHeader title="Secant Method" subtitle="ตาราง + กราฟ แสดงการทำงาน (เวอร์ชันใหม่)" />
+      <PageHeader title="Secant Method"/>
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* ===== Input Section ===== */}

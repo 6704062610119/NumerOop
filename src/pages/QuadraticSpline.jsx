@@ -126,7 +126,6 @@ export default function QuadraticSpline() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Quadratic Spline Interpolation"
-        subtitle="การประมาณค่า f(x) ด้วย Quadratic Spline"
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">

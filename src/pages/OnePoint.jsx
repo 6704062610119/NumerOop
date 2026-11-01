@@ -127,7 +127,7 @@ export default function OnePoint() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <PageHeader title="One-Point Iteration" subtitle="ระบุ x_{n+1} = g(x) โดยตรง" />
+      <PageHeader title="One-Point Iteration" />
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* ===== Input Panel ===== */}

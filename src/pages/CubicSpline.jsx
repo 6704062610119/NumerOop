@@ -123,7 +123,7 @@ export default function CubicSpline() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <PageHeader title="Cubic Spline" subtitle="ประมาณค่า y ด้วย Cubic Spline Interpolation" />
+      <PageHeader title="Cubic Spline" />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">
         <label className="block text-sm text-gray-400 mb-1">จำนวนจุดข้อมูล (≥ 3)</label>

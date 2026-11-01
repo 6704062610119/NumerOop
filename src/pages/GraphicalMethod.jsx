@@ -130,7 +130,7 @@ export default function GraphicalMethod() {
     <div className="max-w-6xl mx-auto p-6">
       <PageHeader
         title="Graphical Method"
-        subtitle="หาค่ารากของสมการโดยดูจุดตัดแกน X จากกราฟ f(x)"
+
       />
 
       <div className="grid md:grid-cols-2 gap-6">

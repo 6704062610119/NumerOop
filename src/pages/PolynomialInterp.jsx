@@ -100,7 +100,6 @@ export default function PolynomialInterp() {
     <div className="max-w-4xl mx-auto p-6">
       <PageHeader
         title="Newton Divided Differences"
-        subtitle={"Pn(x*) = f[x0] + f[x0,x1](x*−x0) + f[x0,x1,x2](x*−x0)(x*−x1) + …"}
       />
 
       <div className="bg-slate-800 rounded-lg p-4 shadow">
